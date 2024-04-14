@@ -1,0 +1,97 @@
+#--wallet wallet.dat --enable-gpu
+
+###########################################################################
+# This is a comment, btcrecover ignores everything after a # sign         #
+# To automatically load a tokenlist save it as btcrecover-tokens-auto.txt #
+# We can add command-lines in the token by writing #-- on the first line, #
+# this is the only exception on the # comment rule                        #
+# Just paste this file and your wallet.dat in btcrecover-master folder    # 
+# Run btcrecover without extra arguments (since they are in this file)     #
+# --threads ignored for GPU based Bitcoin Core recovery                   #
+###########################################################################
+
+# The following lines are examples of valid tokens:
+
+# A token with a single digit (0-9)
+%d
+
+# A token with two digits (00-99)
+%2d
+
+# A token with one, two, or three digits (0-999)
+%1,3d
+
+# A token with a lowercase letter (a-z)
+%a
+
+# A token with an uppercase letter (A-Z)
+%A
+
+# A token with a symbol (!@#$)
+%y
+
+# A token with any character
+%P
+
+# A token with a space
+%s
+
+# A token with a percent sign
+%%
+
+# A token with a caret (^)
+%^
+
+# A token with a plus sign (+)
+%+
+
+# A token with a dollar sign ($)
+%$
+
+# A token with a single digit or a lowercase letter
+%1din
+
+# A token with a single digit, a lowercase letter, or an uppercase letter
+%1,3in
+
+# A token with a single digit, a lowercase letter, or an uppercase letter at the beginning of the password
+^%1,3in
+
+# A token with a single digit, a lowercase letter, or an uppercase letter at the end of the password
+%1,3in$
+
+# A token with a single digit, a lowercase letter, or an uppercase letter, with a space before it
+%s%1,3in
+
+# A token with a single digit, a lowercase letter, or an uppercase letter, with a space after it
+%1,3in%s
+
+# A token with a single digit, a lowercase letter, or an uppercase letter, with a space before and after it
+%s%1,3in%s
+
+# A token with a single digit, a lowercase letter, or an uppercase letter, with a caret before it
+%^%1,3in
+
+# A token with a single digit, a lowercase letter, or an uppercase letter, with a caret after it
+%1,3in%^
+
+# A token with a single digit, a lowercase letter, or an uppercase letter, with a caret before and after it
+%^%1,3in%^
+
+# A token with a single digit, a lowercase letter, or an uppercase letter, with a plus sign before it
+%+%1,3in
+
+# A token with a single digit, a lowercase letter, or an uppercase letter, with a plus sign after it
+%1,3in%+
+
+# A token with a single digit, a lowercase letter, or an uppercase letter, with a plus sign before and after it
+%+%1,3in%+
+
+# A token with a single digit, a lowercase letter, or an uppercase letter, with a dollar sign before it
+%$%1,3in
+
+# A token with a single digit, a lowercase letter, or an uppercase letter, with a dollar sign after it
+%1,3in%$
+
+# A token with a single digit, a lowercase letter, or an uppercase letter, with a dollar sign before and after it
+%$%1,3in%$
